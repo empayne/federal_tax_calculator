@@ -26,7 +26,7 @@ INFO:root:added tax of $94258.56 ($285632.00 at rate 0.33)
 143902.87
 ```
 
-To use an alternate configuration file, specify the path with `-c`:
+To use an alternate configuration file, specify the path with `-c` (a flat tax rate configuration file is included as an example):
 ```
 python3 federal.py 500000 -v -c ./config/flat_tax_rate.json
 INFO:root:Initialized with 0 brackets, top marginal rate of 0.16
