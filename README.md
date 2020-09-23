@@ -23,6 +23,7 @@ INFO:root:added tax of $9949.47 ($48534.00 at rate 0.205)
 INFO:root:added tax of $13885.04 ($53404.00 at rate 0.26)
 INFO:root:added tax of $18529.55 ($63895.00 at rate 0.29)
 INFO:root:added tax of $94258.56 ($285632.00 at rate 0.33)
+INFO:root:calculated an effective tax rate of 0.29
 143902.87
 ```
 
@@ -31,6 +32,7 @@ To use an alternate configuration file, specify the path with `-c` (a flat tax r
 python3 federal.py 500000 -v -c ./config/flat_tax_rate.json
 INFO:root:Initialized with 0 brackets, top marginal rate of 0.16
 INFO:root:added tax of $80000.00 ($500000.00 at rate 0.16)
+INFO:root:calculated an effective tax rate of 0.16
 80000.00
 ```
 
