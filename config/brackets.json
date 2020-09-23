@@ -1,0 +1,21 @@
+{
+    "brackets": [
+        {
+            "income": 48535,
+            "rate": 0.15
+        },
+        {
+            "income": 48534,
+            "rate": 0.205
+        },
+        {
+            "income": 53404,
+            "rate": 0.26
+        },
+        {
+            "income": 63895,
+            "rate": 0.29
+        }
+    ],
+    "top_marginal_rate": 0.33
+}
