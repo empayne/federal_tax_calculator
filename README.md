@@ -33,3 +33,8 @@ INFO:root:Initialized with 0 brackets, top marginal rate of 0.16
 INFO:root:added tax of $80000.00 ($500000.00 at rate 0.16)
 80000.00
 ```
+
+To run tests, run the following command:
+```
+python3 -m unittest test_tax_bracket test_tax_bracket_collection test_utils
+```
