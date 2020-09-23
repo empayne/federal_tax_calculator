@@ -29,12 +29,18 @@ def calculate_tax_owed(income, configuration):
     tax_brackets = TaxBracketCollection(configuration)
     return tax_brackets.calculate_tax(income)
 
+def calculate_effective_tax_rate(income, configuration):
+    tax_brackets = TaxBracketCollection(configuration)
+    return tax_brackets.effective_tax_rate(income)
+
 def main():
     income, verbose, config_file = parse_arguments()
     configuration = Utils.read_tax_brackets_configuration(config_file)
     setup_logger(verbose)
     
     tax_owed = calculate_tax_owed(income, configuration)
+    effective_tax_rate = calculate_effective_tax_rate(income, configuration)
+    logging.info(f"calculated an effective tax rate of {effective_tax_rate}")
     print(Utils.format_currency(tax_owed))
 
 main()

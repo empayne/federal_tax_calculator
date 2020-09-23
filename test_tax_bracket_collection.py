@@ -38,7 +38,11 @@ class TestTaxBracketCollection(unittest.TestCase):
         self.assertEqual(
             expected_tax_owed,
             bracket_collection.calculate_tax(500000)
-        ) 
+        )
+
+    def test_calculate_effective_tax_rate(self):
+         bracket_collection = TaxBracketCollection(configuration)
+        self.assertEqual("0.15", bracket_collection.calculate_tax(10000))
     
     def test_error_calculate_tax_negative_income(self):
         bracket_collection = TaxBracketCollection(configuration)

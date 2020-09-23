@@ -40,3 +40,10 @@ class TaxBracketCollection:
             total_tax += self.top_marginal_bracket.calculate_tax(income)
 
         return total_tax
+
+    def effective_tax_rate(self, income):
+        # We could improve performance here by saving / memoizing the value
+        # of "calculate_tax" if we called it earlier, at the expense of making
+        # TaxBracketCollection stateful.
+        total_tax = self.calculate_tax(income)
+        return format(total_tax/income, '.2f')
